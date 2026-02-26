@@ -18,6 +18,9 @@ body {
     overflow-x: hidden;
 }
 
+
+/* AI BACKGROUND */
+
 #ai-canvas {
     position: fixed;
     inset: 0;
@@ -25,7 +28,7 @@ body {
 }
 
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header {
     text-align: center;
@@ -47,12 +50,18 @@ header h1 {
     color: #94a3b8;
 }
 
+
+/* SOCIAL BUTTONS (DESKTOP) */
+
 .social-links {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .social-links a {
-    margin: 8px;
     padding: 12px 22px;
     border-radius: 30px;
     text-decoration: none;
@@ -60,6 +69,12 @@ header h1 {
     border: 1px solid var(--border);
     color: var(--blue);
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+    background: rgba(56, 189, 248, 0.1);
 }
 
 .resume-btn {
@@ -68,7 +83,7 @@ header h1 {
 }
 
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section {
     padding: 80px 15%;
@@ -81,7 +96,7 @@ h2 {
 }
 
 
-/* CARDS */
+/* ================= CARDS ================= */
 
 .card {
     background: var(--glass);
@@ -93,7 +108,7 @@ h2 {
 }
 
 
-/* SKILLS GRID */
+/* ================= SKILLS GRID ================= */
 
 .grid {
     display: grid;
@@ -110,7 +125,7 @@ h2 {
 }
 
 
-/* PROJECT BUTTON */
+/* ================= PROJECT BUTTON ================= */
 
 .project-btn {
     display: inline-block;
@@ -119,7 +134,7 @@ h2 {
 }
 
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 #contact {
     text-align: center;
@@ -137,7 +152,7 @@ h2 {
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer {
     text-align: center;
@@ -146,13 +161,16 @@ footer {
 }
 
 
-/* ========================= */
+/* ================================================= */
 
 
-/* MOBILE & LANDSCAPE FIXES  */
+/* ================= RESPONSIVE ==================== */
 
 
-/* ========================= */
+/* ================================================= */
+
+
+/* MOBILE (Portrait) */
 
 @media (max-width: 480px) {
     header {
@@ -164,18 +182,29 @@ footer {
     .typing {
         font-size: 1rem;
     }
+    /* FIXED BUTTON ALIGNMENT */
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
     .social-links a {
-        display: block;
-        width: 85%;
-        margin: 10px auto;
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 0;
+        text-align: center;
     }
     section {
         padding: 50px 6%;
     }
     .email-btn {
         width: 90%;
+        max-width: 320px;
     }
 }
+
+
+/* MOBILE (Landscape) */
 
 @media (max-height: 500px) and (orientation: landscape) {
     header {
@@ -188,6 +217,9 @@ footer {
         padding: 40px 8%;
     }
 }
+
+
+/* TABLETS */
 
 @media (max-width: 900px) {
     section {
