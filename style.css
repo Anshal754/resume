@@ -1,0 +1,134 @@
+:root {
+    --blue: #38bdf8;
+    --purple: #a855f7;
+    --glass: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background: #020617;
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+#ai-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-family: Orbitron, sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.typing {
+    margin-top: 15px;
+    color: #94a3b8;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    margin: 8px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    color: var(--blue);
+    backdrop-filter: blur(10px);
+}
+
+.resume-btn {
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    color: #020617!important;
+}
+
+section {
+    padding: 80px 15%;
+}
+
+h2 {
+    font-family: Orbitron;
+    color: var(--blue);
+    margin-bottom: 30px;
+}
+
+.card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 28px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(14px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.grid span {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 14px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--blue);
+}
+
+#contact {
+    text-align: center
+}
+
+.email-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 42px;
+    font-family: Orbitron;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    color: #020617;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+@media(max-width:768px) {
+    section {
+        padding: 60px 8%
+    }
+    header h1 {
+        font-size: 2.2rem
+    }
+}
