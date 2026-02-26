@@ -8,11 +8,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #020617;
     color: #e5e7eb;
     overflow-x: hidden;
@@ -24,13 +24,16 @@ body {
     z-index: -1;
 }
 
+
+/* HEADER */
+
 header {
     text-align: center;
     padding: 100px 20px;
 }
 
 header h1 {
-    font-family: Orbitron, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
     background: linear-gradient(90deg, var(--blue), var(--purple));
     background-clip: text;
@@ -40,8 +43,8 @@ header h1 {
 
 .typing {
     margin-top: 15px;
-    color: #94a3b8;
     font-size: 1.2rem;
+    color: #94a3b8;
 }
 
 .social-links {
@@ -61,18 +64,24 @@ header h1 {
 
 .resume-btn {
     background: linear-gradient(90deg, var(--blue), var(--purple));
-    color: #020617!important;
+    color: #020617 !important;
 }
+
+
+/* SECTIONS */
 
 section {
     padding: 80px 15%;
 }
 
 h2 {
-    font-family: Orbitron;
+    font-family: 'Orbitron', sans-serif;
     color: var(--blue);
     margin-bottom: 30px;
 }
+
+
+/* CARDS */
 
 .card {
     background: var(--glass);
@@ -82,6 +91,9 @@ h2 {
     margin-bottom: 25px;
     backdrop-filter: blur(14px);
 }
+
+
+/* SKILLS GRID */
 
 .grid {
     display: grid;
@@ -97,26 +109,35 @@ h2 {
     border-radius: 12px;
 }
 
+
+/* PROJECT BUTTON */
+
 .project-btn {
     display: inline-block;
     margin-top: 15px;
     color: var(--blue);
 }
 
+
+/* CONTACT */
+
 #contact {
-    text-align: center
+    text-align: center;
 }
 
 .email-btn {
     display: inline-block;
     margin-top: 25px;
     padding: 16px 42px;
-    font-family: Orbitron;
+    font-family: 'Orbitron', sans-serif;
     background: linear-gradient(90deg, var(--blue), var(--purple));
     color: #020617;
     border-radius: 40px;
     text-decoration: none;
 }
+
+
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -124,11 +145,52 @@ footer {
     color: #64748b;
 }
 
-@media(max-width:768px) {
-    section {
-        padding: 60px 8%
+
+/* ========================= */
+
+
+/* MOBILE & LANDSCAPE FIXES  */
+
+
+/* ========================= */
+
+@media (max-width: 480px) {
+    header {
+        padding: 70px 15px;
     }
     header h1 {
-        font-size: 2.2rem
+        font-size: 1.9rem;
+    }
+    .typing {
+        font-size: 1rem;
+    }
+    .social-links a {
+        display: block;
+        width: 85%;
+        margin: 10px auto;
+    }
+    section {
+        padding: 50px 6%;
+    }
+    .email-btn {
+        width: 90%;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 50px 20px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    section {
+        padding: 40px 8%;
+    }
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 60px 10%;
     }
 }

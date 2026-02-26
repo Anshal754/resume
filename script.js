@@ -1,4 +1,4 @@
-// Typing effect
+// Typing animation
 const text = "Applied Machine Learning Engineer | MLOps | AI Systems";
 let i = 0;
 
@@ -11,29 +11,41 @@ function type() {
 }
 type();
 
-// AI Neural Background
+// AI background canvas
 const canvas = document.getElementById("ai-canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+window.addEventListener("orientationchange", resizeCanvas);
 
 let nodes = Array.from({ length: 80 }, () => ({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
     vx: (Math.random() - 0.5),
-    vy: (Math.random() - 0.5)
+    vy: (Math.random() - 0.5),
 }));
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     nodes.forEach(n => {
         n.x += n.vx;
         n.y += n.vy;
+
         if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
         if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+
         ctx.fillStyle = "#38bdf8";
         ctx.fillRect(n.x, n.y, 2, 2);
     });
+
     requestAnimationFrame(draw);
 }
+
 draw();
